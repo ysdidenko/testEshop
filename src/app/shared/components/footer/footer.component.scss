@@ -1,0 +1,22 @@
+$gold: #c5b358;
+:host {
+  background-color: #313131;
+  display: block;
+  color: white;
+}
+p,
+ul {
+  padding: 1rem;
+  margin: 0;
+}
+.footer-menu {
+  list-style: none;
+
+  li {
+    display: inline;
+    padding: 0 1rem;
+  }
+  a {
+    color: $gold;
+  }
+}

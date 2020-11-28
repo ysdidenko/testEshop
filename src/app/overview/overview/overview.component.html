@@ -1,0 +1,25 @@
+<div class="container">
+    <div *ngIf="products$ | async as products; else loading" [@listAnimation]="products" fxLayout="row wrap" fxLayoutGap="2rem grid" > 
+        <div *ngFor="let product of products " fxFlex="25%" fxFlex.lt-lg="33.33%" fxFlex.lt-sm="50%" >
+            <mat-card fxLayout="column" (click)="navigate(product.SKU)">
+                <img class='product-image' [src]="product.Image">
+                <mat-card-title>
+                    {{product.Name}}
+                    <span fxFlex></span>
+                    <strong>$99.99</strong>
+                </mat-card-title>
+                <mat-card-content>{{product.Description}}</mat-card-content>
+                <span fxFlex></span>
+                <mat-card-actions>
+                    <button mat-raised-button color="primary">More</button>
+                    <br />
+                    <br />
+                </mat-card-actions>
+            </mat-card>
+        </div>
+
+    </div >
+</div>
+<ng-template #loading>
+    <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+</ng-template>

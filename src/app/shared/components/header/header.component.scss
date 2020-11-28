@@ -1,0 +1,86 @@
+$gold: #c5b358;
+.container {
+  position: relative;
+  z-index: 999;
+}
+
+:host {
+  display: block;
+  padding: 1rem;
+  //background-color: #313131;
+  width: 100%;
+
+  ::ng-deep {
+    mat-form-field {
+      margin-bottom: -1.5rem;
+    }
+    .mat-form-field-underline {
+      background-color: $gold;
+    }
+    .mat-form-field-ripple {
+      background-color: $gold;
+    }
+    .mat-form-field-appearance-outline .mat-form-field-outline {
+      color: $gold;
+    }
+    /* Font color */
+    input.mat-input-element {
+      color: $gold;
+    }
+    mat-label {
+      color: $gold !important;
+    }
+  }
+}
+
+.logo {
+  img {
+    display: block;
+    width: 200px;
+  }
+}
+.menu {
+  mat-icon {
+    color: white;
+  }
+}
+
+.ribbon {
+  width: 80px;
+  height: 60px;
+  background-color: $gold;
+  position: absolute;
+  z-index: 900;
+  left: 250px;
+  top: -350px;
+  animation: drop forwards 0.8s 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+  font-weight: bold;
+  color: #222;
+  font-size: 16px;
+  line-height: 30px;
+  text-align: center;
+  font-family: fantasy;
+  small {
+    font-size: 10px;
+    display: block;
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    bottom: -30px;
+    border-left: 40px solid $gold;
+    border-right: 40px solid $gold;
+    border-bottom: 30px solid transparent;
+  }
+}
+
+@keyframes drop {
+  0% {
+    top: -350px;
+  }
+  100% {
+    top: -1rem;
+  }
+}

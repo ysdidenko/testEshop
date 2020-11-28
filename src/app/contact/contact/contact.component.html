@@ -1,0 +1,24 @@
+<div class="container">
+    <mat-card>
+        <h2>Contact us:</h2>
+        <form [formGroup]="form" (submit)="sendMessage()">
+            <mat-form-field class="full-width">
+                <mat-label>From:</mat-label>
+                <input matInput formControlName="from" required />
+            </mat-form-field>
+            <mat-form-field class="full-width">
+                <mat-label>Subject:</mat-label>
+                <input matInput formControlName="subject" required />
+            </mat-form-field>
+            <mat-form-field class="full-width">
+                <mat-label>Message:</mat-label>
+                <textarea matInput formControlName="message" rows="5" required>
+                </textarea>
+            </mat-form-field>
+            <div style="text-align:right">
+            	<button [disabled]="form.invalid" mat-raised-button color="primary">Send</button>
+            </div>
+        </form>
+    </mat-card>
+   
+</div>

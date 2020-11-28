@@ -1,0 +1,23 @@
+<div class="container">
+
+    <div fxLayout="row wrap" fxLayoutGap="1rem grid" *ngIf="product$ | async as product; else loading" >
+        <img fxFlex="300px" class="big-image" loading="lazy" [src]="product.Image">
+        <div fxFlex>
+            <mat-card>
+                <mat-card-title>{{product.Name}}</mat-card-title>
+                <mat-card-content>
+                    <p>{{product.Description}}</p>
+                    <p>In stock: <strong>{{product.StockTotal}}</strong></p>
+                    <p class="price">${{product.Price}}</p>
+                    <button mat-raised-button color="primary">Add to cart</button>
+                </mat-card-content> 
+            </mat-card>
+        </div>
+       
+    </div>
+   
+</div>
+
+<ng-template #loading>
+    <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+</ng-template>

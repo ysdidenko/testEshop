@@ -1,0 +1,24 @@
+@import "~@angular/material/theming";
+
+:host {
+  padding: 1rem;
+  display: block;
+}
+
+mat-card {
+  height: 100%;
+  transition: transform 0.2s linear;
+  .product-image {
+    display: block;
+    width: calc(100% + 2rem);
+    height: auto;
+    margin: -1rem -1rem 1rem;
+  }
+  mat-card-actions {
+    text-align: center;
+  }
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.025);
+  }
+}

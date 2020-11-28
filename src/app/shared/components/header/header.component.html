@@ -1,0 +1,22 @@
+<div class="container" fxLayout="row" fxLayoutGap="1rem" fxLayoutAlign="start center">
+    <a fxFlex="0 0 auto" [routerLink]="'./'" class="logo">
+        <img src="./assets/img/logo.png" alt="">
+    </a>
+    <span fxFlex></span>
+    <mat-form-field fxFlex="400px" appearance="outline">
+        <mat-label>Search</mat-label>
+        <input matInput type="text" />
+    </mat-form-field>
+    
+    <div class="menu"> 
+        <button mat-icon-button aria-label="Account">
+            <mat-icon>shopping_cart</mat-icon>
+          </button>
+          <button mat-icon-button aria-label="Shopping cart">
+            <mat-icon>person</mat-icon>
+          </button>
+    </div>
+    <div class="ribbon">
+        <small>Shop of the year</small> 2020
+    </div>
+</div>
